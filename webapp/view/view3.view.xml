@@ -1,0 +1,42 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="UI5_course.UI5_course.controller.view3"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<App id="view3">
+		<pages>
+			<Page title="{i18n>task3Title}">
+				<content>
+					<Toolbar>
+						<ToolbarSpacer/>
+						<Button id="btnTask3Back" class="nav_to" icon="sap-icon://navigation-left-arrow" text="{i18n>btnBackTask}" type="Emphasized" press="onNavigate"/>
+						<ToolbarSpacer/>
+					</Toolbar>
+					<Table items="{workers>/workers}">
+						<columns>
+							<Column>
+								<Text text="{i18n>lbId}"/>
+							</Column>
+							<Column>
+								<Text text="{i18n>lbName}"/>
+							</Column>
+							<Column>
+								<Text text="{i18n>lbAge}"/>
+							</Column>
+							<Column>
+								<Text text="{i18n>lbPosition}"/>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem type="Active" press="onItemPress">
+								<cells>
+									<Text text="{workers>id}"/>
+									<Text text="{workers>name} {workers>secondname}"/>
+									<Text text="{workers>age}"/>
+									<Text text="{workers>position}"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

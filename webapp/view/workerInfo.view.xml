@@ -1,0 +1,43 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:f="sap.ui.layout.form" xmlns="sap.m"
+	controllerName="UI5_course.UI5_course.controller.workerInfo" xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page title="{i18n>workerInfoTitle}">
+				<content>
+					<Toolbar>
+						<ToolbarSpacer/>
+						<Button id="btnInfoBack" class = "nav_to" icon="sap-icon://navigation-left-arrow" text="{i18n>btnBackToTable}" type="Emphasized" press="onNavigate"/>
+						<ToolbarSpacer/>
+					</Toolbar>
+					<Panel width="auto" class="sapUiNoContentPadding">
+						<headerToolbar>
+							<Toolbar>
+								<Title text="{i18n>lbWorkerId} {workers>id}" level="H2"/>
+								<ToolbarSpacer/>
+							</Toolbar>
+						</headerToolbar>
+						<content>
+							<f:SimpleForm editable="false" layout="ResponsiveGridLayout" labelSpanL="3" labelSpanM="3" emptySpanL="4" emptySpanM="4" columnsL="1"
+								columnsM="1">
+								<f:content>
+									<Label text="{i18n>lbFirstName}"/>
+									<Text text="{workers>name}"/>
+									<Label text="{i18n>lbSecondName}"/>
+									<Text text="{workers>secondname}"/>
+									<Label text="{i18n>lbAge}"/>
+									<Text text="{workers>age}"/>
+									<Label text="{i18n>lbGender}"/>
+									<Text text="{workers>gender}"/>
+									<Label text="{i18n>lbPosition}"/>
+									<Text text="{workers>position}"/>
+									<Label text="{i18n>lbAddInfo}"/>
+									<Text text="{workers>addInfo}"/>
+								</f:content>
+							</f:SimpleForm>
+						</content>
+					</Panel>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

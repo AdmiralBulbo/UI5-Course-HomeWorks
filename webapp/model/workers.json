@@ -1,0 +1,40 @@
+{
+	"workers": [
+		{
+		"id": 1,
+		"name": "Polina",
+		"secondname": "Sergeevna",
+		"age": 21,
+		"gender": "female",
+		"position": "Master Cleaner",
+		"addInfo": "Best worker in LeverX Company."
+		},
+		{
+		"id": 2,
+		"name": "Justin",
+		"secondname": "Timberlake",
+		"age": 42,
+		"gender": "male",
+		"position": "High Class Developer",
+		"addInfo": "Timber, just in lake. Hahaha"
+		},
+		{
+		"id": 3,
+		"name": "Timber",
+		"secondname": "Just in Lake",
+		"age": 24,
+		"gender": "male",
+		"position": "Cleaner",
+		"addInfo": "Timber, just in lake. Hahaha"
+		},
+		{
+		"id": 4,
+		"name": "Genadiy",
+		"secondname": "Bukin",
+		"age": 43,
+		"gender": "male",
+		"position": "Shoes Seller",
+		"addInfo": "Забил решающий гол в финале турнира Коженный Мяч"
+		}
+		]
+}

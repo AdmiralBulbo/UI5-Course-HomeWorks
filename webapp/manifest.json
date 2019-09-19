@@ -1,0 +1,130 @@
+{
+	"_version": "1.12.0",
+	"sap.app": {
+		"id": "UI5_course.UI5_course",
+		"type": "application",
+		"i18n": "i18n/i18n.properties",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"title": "{{appTitle}}",
+		"description": "{{appDescription}}",
+		"sourceTemplate": {
+			"id": "ui5template.basicSAPUI5ApplicationProject",
+			"version": "1.40.12"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "",
+			"favIcon": "",
+			"phone": "",
+			"phone@2": "",
+			"tablet": "",
+			"tablet@2": ""
+		},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+	"sap.ui5": {
+		"flexEnabled": false,
+		"rootView": {
+			"viewName": "UI5_course.UI5_course.view.App",
+			"type": "XML",
+			"async": true,
+			"id": "App"
+		},
+		"dependencies": {
+			"minUI5Version": "1.65.6",
+			"libs": {
+				"sap.ui.layout": {},
+				"sap.ui.core": {},
+				"sap.m": {}
+			}
+		},
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"models": {
+			"i18n": {
+				"type": "sap.ui.model.resource.ResourceModel",
+				"settings": {
+					"bundleName": "UI5_course.UI5_course.i18n.i18n"
+				}
+			},
+			"workers": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/workers.json"
+			}
+		},
+		"resources": {
+			"css": [{
+				"uri": "css/style.css"
+			}]
+		},
+		"routing": {
+			"config": {
+				"routerClass": "sap.m.routing.Router",
+				"viewType": "XML",
+				"async": true,
+				"viewPath": "UI5_course.UI5_course.view",
+				"controlAggregation": "pages",
+				"controlId": "app",
+				"clearControlAggregation": false
+			},
+			"routes": [{
+				"name": "RouteApp",
+				"pattern": "RouteApp",
+				"target": [
+					"TargetApp"
+				]
+			}, {
+				"name": "view2",
+				"pattern": "view2",
+				"target": "view2"
+			}, {
+				"name": "app",
+				"pattern": "app",
+				"target": "app"
+			}, {
+				"name": "view3",
+				"pattern": "view3",
+				"target": "view3"
+			}, {
+				"pattern": "workerInfo/{workerId}",
+				"name": "workerInfo",
+				"target": "workerInfo"
+			}],
+			"targets": {
+				"TargetApp": {
+					"viewType": "XML",
+					"transition": "slide",
+					"clearControlAggregation": false,
+					"viewId": "App",
+					"viewName": "App"
+				},
+				"view2": {
+					"viewType": "XML",
+					"viewName": "view2"
+				},
+				"app": {
+					"viewType": "XML",
+					"viewName": "App"
+				},
+				"view3": {
+					"viewType": "XML",
+					"viewName": "view3"
+				},
+				"workerInfo": {
+					"viewType": "XML",
+					"viewName": "workerInfo"
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,61 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="UI5_course.UI5_course.controller.view2"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<App id="view2">
+		<pages>
+			<!--Task 2 Page-->
+			<Page id="task2page" title ="{i18n>task2Title}">
+				<content>
+					<Toolbar>
+						<ToolbarSpacer/>
+						<Button id="btnTask2Back" class = "nav_to" icon="sap-icon://navigation-left-arrow" text="{i18n>btnBackTask}" type="Emphasized" press="onNavigate"/>
+						<Button id="btnTask2Next" class = "nav_to" icon="sap-icon://navigation-right-arrow" text="{i18n>btnNextTask}" type="Emphasized" press="onNavigate"/>
+						<ToolbarSpacer/>
+					</Toolbar>
+					<VBox>
+						<Label text="{i18n>lbActSel}"/>
+						<ActionSelect id="select1">
+							<items>
+								<core:Item text="action1"/>
+								<core:Item text="action2"/>
+							</items>
+						</ActionSelect>
+						<Label text="{i18n>lbCheckBox}"/>
+						<CheckBox id="checkbox1"/>
+						<Label text="{i18n>lbComboBox}"/>
+						<ComboBox id="combobox1">
+							<items>
+								<core:Item text="Male"/>
+								<core:Item text="Female"/>
+							</items>
+						</ComboBox>
+						<Label text="DatePicker"/>
+						<DatePicker xmlns="sap.m" width="50%" id="picker1"/>
+						<Label text="Feed Input"/>
+						<FeedInput placeholder="There should be your feedback" buttonTooltip="Send" id="feed1"/>
+						<Label text="Input"/>
+						<Input id='input1' width="50%" placeholder="Hi, i'm an input!"/>
+						<Label text="Radio button"/>
+						<RadioButtonGroup xmlns="sap.m" columns="2" id="group0">
+							<buttons>
+								<RadioButton text="Radio One" id="radio1"/>
+								<RadioButton text="Radio Two" id="radio2"/>
+							</buttons>
+						</RadioButtonGroup>
+						<Label text="Rating indicator"/>
+						<RatingIndicator id="rating1"/>
+						<Label text="Search Field"/>
+						<SearchField id="search1" width="50%" placeholder="Hi! I'm search field"/>
+						<Label text="Slider"/>
+						<Slider id="slider1" width="50%"/>
+						<Label text="Switch"/>
+						<Switch id="switch1"/>
+						<Label text="Text Area"/>
+						<TextArea id="area1" placeholder="Hi! I'm text area"/>
+						<Label text="Time Picker"/>
+						<TimePicker id="time1"/>
+					</VBox>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
