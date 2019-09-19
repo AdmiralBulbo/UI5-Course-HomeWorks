@@ -5,7 +5,6 @@ sap.ui.define([
 	"use strict";
 
 	return Controller.extend("UI5_course.UI5_course.controller.workerInfo", {
-
 		onInit: function () {
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			oRouter.getRoute("workerInfo").attachMatched(this._onRouteMatched, this);
