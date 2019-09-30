@@ -1,5 +1,4 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="UI5_course.UI5_course.controller.view3"
-	xmlns:html="http://www.w3.org/1999/xhtml">
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="UI5_course.UI5_course.controller.view3">
 	<App id="view3">
 		<pages>
 			<Page title="{i18n>task3Title}">
@@ -7,6 +6,12 @@
 					<Toolbar>
 						<ToolbarSpacer/>
 						<Button id="btnTask3Back" class="nav_to" icon="sap-icon://navigation-left-arrow" text="{i18n>btnBackTask}" type="Emphasized" press="onNavigate"/>
+						<Button id="btnTask3Next" class="nav_to" icon="sap-icon://navigation-right-arrow" text="{i18n>btnNextTask}" type="Emphasized" press="onNavigate"/>
+						<ToolbarSpacer/>
+					</Toolbar>
+					<Toolbar>
+						<ToolbarSpacer/>
+						<Title text="Workers from model workers.json"/>
 						<ToolbarSpacer/>
 					</Toolbar>
 					<Table items="{workers>/workers}">
@@ -25,12 +30,45 @@
 							</Column>
 						</columns>
 						<items>
-							<ColumnListItem type="Active" press="onItemPress">
+							<ColumnListItem id="coumnlist" type="Active" press="onItemPress">
 								<cells>
 									<Text text="{workers>id}"/>
-									<Text text="{workers>name} {workers>secondname}"/>
+									<Text text="{workers>name} {workers&gt;secondname}"/>
 									<Text text="{workers>age}"/>
 									<Text text="{workers>position}"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+					<Toolbar>
+						<ToolbarSpacer/>
+						<Title text="Workers from deployd server"/>
+						<ToolbarSpacer/>
+					</Toolbar>
+					<Table items="{workersDeployd>/workers}" noDataText="{i18n>noData}">
+						<columns>
+							<Column>
+								<Text text="{i18n>lbId}"/>
+							</Column>
+							<Column>
+								<Text text="{i18n>lbName}"/>
+							</Column>
+							<Column>
+								<Text text="{i18n>lbAge}"/>
+							</Column>
+							<Column>
+								<Text text="{i18n>lbPosition}"/>
+							</Column>
+							<Column/>
+						</columns>
+						<items>
+							<ColumnListItem type="Active">
+								<cells>
+									<Text text="{workersDeployd>id}"/>
+									<Text text="{workersDeployd>name}"/>
+									<Text text="{workersDeployd>age}"/>
+									<Text text="{workersDeployd>position}"/>
+									<Button id="workerInfoBtn" icon="sap-icon://navigation-right-arrow" tooltip="Watch more info" press="onItemPress"/>
 								</cells>
 							</ColumnListItem>
 						</items>

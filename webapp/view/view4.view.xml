@@ -1,0 +1,55 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="UI5_course.UI5_course.controller.view4"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page title="{i18n>task4Title}">
+				<content>
+					<Toolbar>
+						<ToolbarSpacer/>
+						<Button id="btnTask4Back" class="nav_to" icon="sap-icon://navigation-left-arrow" text="{i18n>btnBackTask}" type="Emphasized"
+							press="onNavigate"/>
+						<ToolbarSpacer/>
+					</Toolbar>
+					<Table id="oDataTable" items="{products>/}" noDataText="{i18n>no_oData}">
+						<columns>
+							<Column>
+								<Text text="{i18n>lbId}"/>
+							</Column>
+							<Column>
+								<Text text="{i18n>lbName}"/>
+							</Column>
+							<Column>
+								<Text text="{i18n>lbDescription}"/>
+							</Column>
+							<Column>
+								<Text text="{i18n>lbReleaseDate}"/>
+							</Column>
+							<Column>
+								<Text text="{i18n>lbDiscontinuedDate}"/>
+							</Column>
+							<Column>
+								<Text text="{i18n>lbRating}"/>
+							</Column>
+							<Column>
+								<Text text="{i18n>lbPrice}"/>
+							</Column>
+						</columns>
+						<items>
+							<ColumnListItem type="Active" press="onItemPress">
+								<cells>
+									<Text text="{products>ID}"/>
+									<Text text="{products>Name}"/>
+									<Text text="{products>Description}"/>
+									<Text text="{products>ReleaseDate}"/>
+									<Text text="{products>DiscontinuedDate}"/>
+									<Text text="{products>Rating}"/>
+									<Text text="{products>Price}"/>
+								</cells>
+							</ColumnListItem>
+						</items>
+					</Table>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>

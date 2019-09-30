@@ -63,9 +63,11 @@
 			}
 		},
 		"resources": {
-			"css": [{
-				"uri": "css/style.css"
-			}]
+			"css": [
+				{
+					"uri": "css/style.css"
+				}
+			]
 		},
 		"routing": {
 			"config": {
@@ -77,29 +79,50 @@
 				"controlId": "app",
 				"clearControlAggregation": false
 			},
-			"routes": [{
-				"name": "RouteApp",
-				"pattern": "RouteApp",
-				"target": [
-					"TargetApp"
-				]
-			}, {
-				"name": "view2",
-				"pattern": "view2",
-				"target": "view2"
-			}, {
-				"name": "app",
-				"pattern": "app",
-				"target": "app"
-			}, {
-				"name": "view3",
-				"pattern": "view3",
-				"target": "view3"
-			}, {
-				"pattern": "workerInfo/{workerId}",
-				"name": "workerInfo",
-				"target": "workerInfo"
-			}],
+			"routes": [
+				{
+					"name": "RouteApp",
+					"pattern": "RouteApp",
+					"target": [
+						"TargetApp"
+					]
+				},
+				{
+					"name": "view2",
+					"pattern": "view2",
+					"target": "view2"
+				},
+				{
+					"name": "app",
+					"pattern": "app",
+					"target": "app"
+				},
+				{
+					"name": "view3",
+					"pattern": "view3",
+					"target": "view3"
+				},
+				{
+					"name": "view4",
+					"pattern": "view4",
+					"target": "view4"
+				},
+				{
+					"pattern": "workerInfo/{workerId}",
+					"name": "workerInfo",
+					"target": "workerInfo"
+				},
+				{
+					"pattern": "workerDeploydInfo/{workerId}",
+					"name": "workerDeploydInfo",
+					"target": "workerDeploydInfo"
+				},
+					{
+					"pattern": "oDataDetails/{productId}",
+					"name": "oDataDetails",
+					"target": "oDataDetails"
+				}
+			],
 			"targets": {
 				"TargetApp": {
 					"viewType": "XML",
@@ -123,6 +146,18 @@
 				"workerInfo": {
 					"viewType": "XML",
 					"viewName": "workerInfo"
+				},
+				"workerDeploydInfo": {
+					"viewType": "XML",
+					"viewName": "workerDeploydInfo"
+				},
+				"view4": {
+					"viewType": "XML",
+					"viewName": "view4"
+				},
+				"oDataDetails": {
+					"viewType": "XML",
+					"viewName": "oDataDetails"
 				}
 			}
 		}

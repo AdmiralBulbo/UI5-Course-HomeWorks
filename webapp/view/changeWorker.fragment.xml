@@ -1,0 +1,32 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns:f="sap.ui.layout.form" xmlns="sap.m"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	<Panel width="auto" class="sapUiNoContentPadding">
+		<headerToolbar>
+			<Toolbar>
+				<ToolbarSpacer/>
+				<Title text="{i18n>lbWorkerId} {workersDeployd>/id}" level="H2"/>
+				<ToolbarSpacer/>
+			</Toolbar>
+			</headerToolbar>
+			<content> 
+				<f:SimpleForm editable="true" layout="ResponsiveGridLayout" labelSpanL="3" labelSpanM="3" emptySpanL="4" emptySpanM="4" columnsL="1"
+					columnsM="1">
+					<f:content>
+						<Label text="{i18n>lbFirstName}"/>
+						<Input value="{workersDeployd>/name}"/>
+						<Label text="{i18n>lbAge}"/>
+						<Input value="{workersDeployd>/age}" type="Number"/>
+						<Label text="{i18n>lbGender}"/>
+						<ComboBox placeholder="{i18n>phGender}" value="{workersDeployd>/sex}">
+								<items>
+									<core:Item key="item-1-key" text="{i18n>male}" id="item0"/>
+									<core:Item key="item-2-key" text="{i18n>female}" id="item1"/>
+								</items>
+						</ComboBox>
+						<Label text="{i18n>lbPosition}"/>
+						<Input value="{workersDeployd>/position}"/>
+					</f:content>
+				</f:SimpleForm>
+			</content>
+		</Panel> 
+	</core:FragmentDefinition>

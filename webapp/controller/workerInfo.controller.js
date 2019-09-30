@@ -9,6 +9,7 @@ sap.ui.define([
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			oRouter.getRoute("workerInfo").attachMatched(this._onRouteMatched, this);
 		},
+		
 		_onRouteMatched: function (oEvent) {
 			var oArgs = oEvent.getParameter("arguments");
 			var oView = this.getView();
@@ -17,9 +18,11 @@ sap.ui.define([
 				 model:"workers"
 			});
 		},
+		
 		onNavigate: function (oEvent) {
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
 			oRouter.navTo("view3");
+			
 		}
 	});
 
