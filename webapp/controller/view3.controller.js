@@ -36,6 +36,9 @@ sap.ui.define([
 			} else if (oEvent.getParameter("id").includes("btnTask3Next")) {
 				oRouter.navTo("view4");
 			}
+			else if (oEvent.getParameter("id").includes("btnToMain")) {
+				oRouter.navTo("app");
+			}
 		},
 
 		onItemPress: function (oEvent) {

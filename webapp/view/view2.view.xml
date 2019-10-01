@@ -2,12 +2,17 @@
 	xmlns:html="http://www.w3.org/1999/xhtml">
 	<App id="view2">
 		<pages>
-			<Page id="task2page" title ="{i18n>task2Title}">
+			<Page id="task2page" title="{i18n>task2Title}">
+				<headerContent>
+					<Button id="btnToMain" icon="sap-icon://home" tooltip="{i18n>toMainPage}" press="onNavigate"/>
+				</headerContent>
 				<content>
 					<Toolbar>
 						<ToolbarSpacer/>
-						<Button id="btnTask2Back" class = "nav_to" icon="sap-icon://navigation-left-arrow" text="{i18n>btnBackTask}" type="Emphasized" press="onNavigate"/>
-						<Button id="btnTask2Next" class = "nav_to" icon="sap-icon://navigation-right-arrow" text="{i18n>btnNextTask}" type="Emphasized" press="onNavigate"/>
+						<Button id="btnTask2Back" class="nav_to" icon="sap-icon://navigation-left-arrow" text="{i18n>btnBackTask}" type="Emphasized"
+							press="onNavigate"/>
+						<Button id="btnTask2Next" class="nav_to" icon="sap-icon://navigation-right-arrow" text="{i18n>btnNextTask}" type="Emphasized"
+							press="onNavigate"/>
 						<ToolbarSpacer/>
 					</Toolbar>
 					<VBox>

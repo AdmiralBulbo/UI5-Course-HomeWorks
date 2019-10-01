@@ -1,12 +1,18 @@
-<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" controllerName="UI5_course.UI5_course.controller.view3">
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml"
+	controllerName="UI5_course.UI5_course.controller.view3">
 	<App id="view3">
 		<pages>
 			<Page title="{i18n>task3Title}">
+				<headerContent>
+					<Button id="btnToMain" icon="sap-icon://home" tooltip="{i18n>toMainPage}" press="onNavigate"/>
+				</headerContent>
 				<content>
 					<Toolbar>
 						<ToolbarSpacer/>
-						<Button id="btnTask3Back" class="nav_to" icon="sap-icon://navigation-left-arrow" text="{i18n>btnBackTask}" type="Emphasized" press="onNavigate"/>
-						<Button id="btnTask3Next" class="nav_to" icon="sap-icon://navigation-right-arrow" text="{i18n>btnNextTask}" type="Emphasized" press="onNavigate"/>
+						<Button id="btnTask3Back" class="nav_to" icon="sap-icon://navigation-left-arrow" text="{i18n>btnBackTask}" type="Emphasized"
+							press="onNavigate"/>
+						<Button id="btnTask3Next" class="nav_to" icon="sap-icon://navigation-right-arrow" text="{i18n>btnNextTask}" type="Emphasized"
+							press="onNavigate"/>
 						<ToolbarSpacer/>
 					</Toolbar>
 					<Toolbar>

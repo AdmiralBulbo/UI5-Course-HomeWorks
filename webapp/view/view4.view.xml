@@ -3,6 +3,9 @@
 	<App>
 		<pages>
 			<Page title="{i18n>task4Title}">
+				<headerContent>
+					<Button id="btnToMain" icon="sap-icon://home" tooltip="{i18n>toMainPage}" press="onNavigate"/>
+				</headerContent>
 				<content>
 					<Toolbar>
 						<ToolbarSpacer/>

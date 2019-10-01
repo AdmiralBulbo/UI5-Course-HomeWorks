@@ -40,7 +40,11 @@ sap.ui.define([
 
 		onNavigate: function (oEvent) {
 			var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-			oRouter.navTo("view3");
+			if (oEvent.getParameter("id").includes("btnTask4Back")) {
+				oRouter.navTo("view3");
+			} else if (oEvent.getParameter("id").includes("btnToMain")) {
+				oRouter.navTo("app");
+			}
 		}
 	});
 

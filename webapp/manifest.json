@@ -88,6 +88,11 @@
 					]
 				},
 				{
+					"name": "view1",
+					"pattern": "view1",
+					"target": "view1"
+				},
+				{
 					"name": "view2",
 					"pattern": "view2",
 					"target": "view2"
@@ -117,7 +122,7 @@
 					"name": "workerDeploydInfo",
 					"target": "workerDeploydInfo"
 				},
-					{
+				{
 					"pattern": "oDataDetails/{productId}",
 					"name": "oDataDetails",
 					"target": "oDataDetails"
@@ -158,6 +163,10 @@
 				"oDataDetails": {
 					"viewType": "XML",
 					"viewName": "oDataDetails"
+				},
+				"view1": {
+					"viewType": "XML",
+					"viewName": "view1"
 				}
 			}
 		}
